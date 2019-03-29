@@ -10,7 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  device_info: any
+  device_info:
+    git:
+      url: https://github.com/zhangruiyu/device_info.git
 
 dev_dependencies:
   flutter_test:
