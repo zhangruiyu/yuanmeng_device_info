@@ -398,7 +398,7 @@ object MobileInfoManager {
                         "\"app_name\"" to "\"it.packageName\"",
                         "\"obtain_time\"" to "\"TimeFormatUtils.timeFormatSmsTimeLine(System.currentTimeMillis(), true)\"",
                         "\"appVersion\"" to "\"it.versionName\""
-                ).toString().replase("=",":")
+                ).toString().replace("=",":")
 
             } else {
                 // 系统应用
