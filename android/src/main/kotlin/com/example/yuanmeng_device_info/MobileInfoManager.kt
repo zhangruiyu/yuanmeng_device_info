@@ -393,11 +393,11 @@ object MobileInfoManager {
             // 非系统应用
             {
                 mapOf<String, String>(
-                        "version_code" to it.versionCode.toString(),
-                        "package_name" to it.packageName,
-                        "app_name" to it.packageName,
-                        "obtain_time" to TimeFormatUtils.timeFormatSmsTimeLine(System.currentTimeMillis(), true),
-                        "appVersion" to it.versionName
+                        "\"version_code\"" to "\"it.versionCode.toString()\"",
+                        "\"package_name\"" to "\"it.packageName\"",
+                        "\"app_name\"" to "\"it.packageName\"",
+                        "\"obtain_time\"" to "\"TimeFormatUtils.timeFormatSmsTimeLine(System.currentTimeMillis(), true)\"",
+                        "\"appVersion\"" to "\"it.versionName\""
                 ).toString()
 
             } else {
