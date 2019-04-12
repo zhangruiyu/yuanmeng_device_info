@@ -23,9 +23,9 @@ class YuanmengDeviceInfoPlugin(val registrar: Registrar) : MethodCallHandler {
     override fun onMethodCall(call: MethodCall, result: Result) {
         when {
             call.method == "imsi" -> result.success(getSubscriberId())
-            call.method == "callRecords" -> result.success(MobileInfoManager.getCallLogList(registrar.activity(), false).map {
+            /*call.method == "callRecords" -> result.success(MobileInfoManager.getCallLogList(registrar.activity(), false).map {
                 it.toString()
-            })
+            })*/
             call.method == "getAppList" -> result.success(MobileInfoManager.getAppList(registrar.activity()))
             call.method == "getWifiMac" -> result.success(MobileInfoManager.getWifiMac())
             else -> result.notImplemented()
