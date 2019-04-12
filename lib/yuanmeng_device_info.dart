@@ -78,11 +78,11 @@ class YuanmengDeviceInfo {
   Future<String> get imsi async {
     return await _channel.invokeMethod<String>("imsi");
   }
-/*
+
   //安卓通话记录
   Future<List<dynamic>> get callRecords async {
     return await _channel.invokeMethod<List<dynamic>>("callRecords");
-  }*/
+  }
 
   //安卓getAppList
   Future<String> get getAppList async {
