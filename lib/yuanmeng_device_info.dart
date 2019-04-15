@@ -93,4 +93,10 @@ class YuanmengDeviceInfo {
   Future<String> get getWifiMac async {
     return (await _channel.invokeMethod<String>("getWifiMac")).toString();
   }
+
+
+  //安卓 getImei
+  Future<String> get getImei async {
+    return androidInfo.androidId;
+  }
 }
