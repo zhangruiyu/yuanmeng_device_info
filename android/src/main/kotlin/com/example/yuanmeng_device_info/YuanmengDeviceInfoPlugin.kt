@@ -34,9 +34,14 @@ class YuanmengDeviceInfoPlugin(val registrar: Registrar) : MethodCallHandler {
 
     @SuppressLint("HardwareIds")
     fun getSubscriberId(): String {
-        val telephonyManager = registrar.activity()
-                .getSystemService(TELEPHONY_SERVICE) as TelephonyManager;// 取得相关系统服务
-        return telephonyManager.subscriberId
+        return try {
+            val telephonyManager = registrar.activity()
+                    .getSystemService(TELEPHONY_SERVICE) as TelephonyManager;// 取得相关系统服务
+             telephonyManager.subscriberId
+        }catch (e:Exception){
+             ""
+        }
+
     }
 
 }
